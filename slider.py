@@ -1,10 +1,10 @@
 def sidebar():
   # Sidebar - Specify parameter settings
   with st.sidebar.header('2. Set Parameter'):
-    split_size = st.sidebar.slider('Rasio Pembagian Data (% Untuk Data Latih)', 10, 90, 80, 5)
-    number_of_features = st.sidebar.slider('jumlah pilihan feature (Untuk Data Latih)', 5, 47, 20, 5)
-    parameter_n_estimators = st.sidebar.slider('Number of estimators (n_estimators)', 10, 100, 50, 10)
-    neighbor = st.sidebar.slider('Jumlah K (KNN)', 11, 101, 55, 11)
+    split_size = st.sidebar.slider(10, 90, 80, 5)
+    number_of_features = st.sidebar.slider(5, 47, 20, 5)
+    parameter_n_estimators = st.sidebar.slider(10, 100, 50, 10)
+    neighbor = st.sidebar.slider(11, 101, 55, 11)
   return split_size, number_of_features, parameter_n_estimators, neighbor
 
 @st.experimental_memo
