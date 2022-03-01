@@ -37,10 +37,11 @@ def app():
   if 'data_praproses.csv' not in os.listdir('data'):
     st.markdown("Please upload data through `Home` page!")
   else:
-    split_size, number_of_features, parameter_n_estimators, neighbor = sidebar()
+    sidebar()
     if st.sidebar.button('Train & Test') or st.session_state.load_state:
       st.session_state.load_state = True
       df=load_data()
+      split_size, number_of_features, parameter_n_estimators, neighbor = sidebar()
       # Choose feature
       new_feature = choose_feature(df)
       # Standarization
